@@ -1,0 +1,125 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #bcbcbd;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1a237e;
+    margin-bottom: 30px;
+}
+
+.loading, .error {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 50px;
+}
+
+.error {
+    color: #d32f2f;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controls label, .controls button {
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.controls select {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.ranking-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #d49090;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.player-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.player-item:hover {
+    transform: translateX(5px);
+    background-color: #fafafa;
+}
+
+.player-item:last-child {
+    border-bottom: none;
+}
+
+.player-rank {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #61dafb;
+    margin-right: 20px;
+    width: 40px;
+    text-align: center;
+}
+
+.player-name {
+    flex-grow: 1;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.player-level,
+.player-score {
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 15px;
+}
+
+.top-3 {
+    background: linear-gradient(135deg, #ffd700, #ffeb3b);
+    color: #333;
+    font-weight: bold;
+    position: relative;
+}
+
+.top-3::before {
+    content: '★';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #a0522d;
+}
+
+.top-3 .player-rank {
+    color: #a0522d;
+}

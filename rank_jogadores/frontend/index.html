@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking de Jogadores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ranking de Jogadores</h1>
+        
+        <div class="controls">
+            <label for="ranking-history">Visualizar Histórico:</label>
+            <select id="ranking-history"></select>
+            <button id="refresh-btn">Ver Último Ranking</button>
+        </div>
+
+        <div class="upload-section">
+            <input type="file" id="csv-file-input" accept=".csv">
+            <button id="upload-btn">Importar CSV</button>
+        </div>
+
+        <div id="loading" class="loading">Carregando ranking...</div>
+        <div id="error" class="error"></div>
+        
+        <ul id="ranking-list" class="ranking-list">
+            </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
